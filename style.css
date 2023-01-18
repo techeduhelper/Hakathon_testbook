@@ -12,15 +12,25 @@
     background-color: #333333;
     width: 100%;
     position: fixed;
+    display: flex;
+    justify-content: space-between;
+}
+.header i{
+    font-size: 2rem;
+    margin-top: 0.4rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    display: none;
 }
 .listitem{
     display: flex;
-    padding: 0.7rem 0 0.5rem 0.8rem;
+    padding: 0.7rem 0 0.3rem 0.8rem;
 
 }
-.listitem li:hover{
+.listitem a:hover{
     background-color: black;
     color: white;
+    padding: 0.7rem 0.2rem 0.3rem 0.2rem;
 
 }
 .listitem li{
@@ -32,7 +42,7 @@
 }
 .listitem li a{
     color: white;
-    font-weight: 100;
+    padding: 0 0.2rem;
 }
 
 .home{
@@ -94,7 +104,8 @@
     color: white;
     padding-top: 2rem;
     padding-bottom: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-weight: lighter;
 }
 .content-div button{
     padding: 1rem;
@@ -171,11 +182,100 @@
 }
 
 .gift-cards{
-    display: grid;
-    grid-template-columns: auto auto;
+    background-color: #F4F4F4;
     padding: 3rem 10% 3rem 10%;
-    grid-gap: 2rem;
+    display: flex;
+    flex-direction: row;
 }
-.gift img{
+.gift-left img{
+    height: 100%;
     width: 100%;
+    
 }
+.gift-left{
+    padding: 10px;
+    flex: 50%;
+}
+.gift-right{
+    padding: 10px;
+    flex: 50%;
+}
+
+@media (max-width: 800px) {
+    .gift-cards {
+      flex-direction: column;
+    }
+  }
+
+  .gift-right p{
+    font-size: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    font-weight: lighter;
+  }
+  .gift-right span{
+    margin-top: 1.5rem;
+  }
+ .gift-right hr{
+    margin-top: 1rem;
+ }
+ .gift-right a{
+    text-decoration: none;
+    color: seagreen;
+    font-size: 1rem;
+ }
+ .gift-right a>i{
+    font-size: 1rem;
+    color: black;
+ }
+ footer-item{
+    background-color: #252529;
+ }
+ .footer-menu{
+    padding: 3rem 10% 3rem 10%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2rem;
+    background-color: #252529;
+    color: white;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-family: 'Times New Roman', Times, serif;
+
+ }
+ .footer-menu div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+ }
+ .footer-menu div a{
+    color: white;
+    font-weight: lighter;
+ }
+ .footer-menu div hr{
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+ }
+
+ .copyright-area{
+    background-color: #333333;
+    padding: 1rem 0 1rem 0;
+    text-align: center;
+    color: white;
+ }
+ /* For footer */
+ @media (max-width: 800px) {
+    .footer-item {
+      display: none;
+    }
+  }
+
+  /* for navbar */
+  @media (max-width: 800px) {
+    .listitem li{
+      display: none;
+    }
+    .header>i{
+        display: block;
+    }
+  }
