@@ -12,14 +12,14 @@
     <!-- nav -->
     <nav>
         <div class="header">
-            <ul class="listitem">
+            <ul class="listitem" id="myListitem">
                 <li><a href="#home">myTunes</a></li>
                 <li><a href="#world">Overview</a></li>
                 <li><a href="#music">Music</a></li>
                 <li><a href="#video">Video</a></li>
                 <li><a href="#gift-card">Gift Cards</a></li>
             </ul>
-            <i class='bx bx-menu'></i>
+            <i onclick="myFunction()" class='bx bx-menu'></i>
         </div>
     </nav>
     <!-- home -->
@@ -114,5 +114,17 @@
     </div>
     <!-- copyright -->
     <div class="copyright-area">Copyright © 2023 Orange <a href="">myTunes</a></div>
+
+
+    <script>
+        function myFunction() {
+  var x = document.getElementById("myListitem");
+  if (x.className === "listitem") {
+    x.className += " responsive";
+  } else {
+    x.className = "listitem";
+  }
+}
+    </script>
 </body>
-</html>
+</html>x
